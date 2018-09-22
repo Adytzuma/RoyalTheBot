@@ -9,6 +9,7 @@ import async_timeout
 from random import randint
 from discord.ext import commands
 import logging
+import os
 
 
 logging.basicConfig(level='INFO')
@@ -143,4 +144,4 @@ async def ping(ctx):
     await asyncio.sleep(2)
     await t.edit(content=f'```My ping is : {ctx.bot.latency * 1000:.0f} MS !```')
 
-bot.run(os.getenv('TOKEN'))
+bot.run(os.getenv("TOKEN"))
